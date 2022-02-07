@@ -21,7 +21,7 @@ router.get('/', (req, res) => {
       ]
     }
   )
-  .then(productData => res.json(productData))
+  .then(dbProductData => res.json(dbProductData))
   .catch(err => {
     console.log(err);
     res.status(500).json(err);
@@ -48,7 +48,7 @@ router.get('/:id', (req, res) => {
       }
     ]
   })
-  .then(productData => res.json(productData))
+  .then(productDataID => res.json(productDataID))
     .catch(err => {
       console.log(err);
       res.status(500).json(err);
